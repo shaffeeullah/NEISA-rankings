@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import GoogleSheets
 import TechscoreReader
+import csv
 
 class School:
     def __init__(self, name):
@@ -165,10 +166,24 @@ def calculateRanks(regattaLink, schoolsLink):
 
     toreturn = getRank(schoolobjects)
 
-    for school in schoolobjects:
-        #print(obje.points)
-        obje = schoolobjects[school]
-        print(obje.name, obje.countedPoints)
+
+    f = open("component scores.csv", "w")
+    f.truncate()
+    f.close()
+
+    with open('component scores.csv', 'w') as result:
+        writer = csv.writer(result, delimiter=",")
+        writer.writerow(('School', 'Counted Scores'))
+        for school in schoolobjects:
+            obje = schoolobjects[school]
+            row = (obje.name, obje.countedPoints)
+            # row = (row[0], str(row[1]))
+            writer.writerow(row)
+
+    # for school in schoolobjects:
+    #     #print(obje.points)
+    #     obje = schoolobjects[school]
+    #     print(obje.name, obje.countedPoints)
 
     return toreturn
 
