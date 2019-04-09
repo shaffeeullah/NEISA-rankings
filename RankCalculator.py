@@ -124,7 +124,6 @@ def calculateRanks(regattaLink, schoolsLink):
     schoolobjects = addSchoolObjects(schoolsLink)
     for index, regatta in df.iterrows():
         regattaType = regatta.Type
-        print(regatta.Link)
         regattaFinishes, totalTeams = TechscoreReader.getRegattaResultsAndNumTeams(regatta.Link)
         # print("new regatta", regattaType, regattaFinishes)
         if (regattaType == "SC_A"):
