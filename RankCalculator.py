@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import GoogleSheets
 import TechscoreReader
+# import Runner
 import csv
 
 class School:
@@ -121,12 +122,10 @@ def addSchoolObjects(schoolsLink):
 
 def calculateRanks(regattaLink, schoolsLink):
     df = GoogleSheets.readSheet(regattaLink)
-    # print(df)
     schoolobjects = addSchoolObjects(schoolsLink)
     for index, regatta in df.iterrows():
         regattaType = regatta.Type
         regattaFinishes, totalTeams = TechscoreReader.getRegattaResultsAndNumTeams(regatta.Link)
-        # print("new regatta", regattaType, regattaFinishes)
         if (regattaType == "SC_A"):
             enterSScores(schoolobjects, regattaFinishes, "SC_A", totalTeams)
 
@@ -136,9 +135,12 @@ def calculateRanks(regattaLink, schoolsLink):
         elif (regattaType == "SC_B"):
             enterSScores(schoolobjects, regattaFinishes, "SC_B", totalTeams)
 
-        elif (regattaType == "A"): #TODO: this still bumps single handeds up to 18 boats
+        elif (regattaType == "A"):
             if (totalTeams < 18):
                 totalTeams = 18
+            enterScores(schoolobjects, regattaFinishes, "A", totalTeams)
+
+        elif (regattaType == "special_A"): #the same as A but it doesn't change the total teams to the 18 minimum
             enterScores(schoolobjects, regattaFinishes, "A", totalTeams)
 
         elif (regattaType == "WSC"):
@@ -164,21 +166,7 @@ def calculateRanks(regattaLink, schoolsLink):
         else:
             print("something is wrong ")
 
-    toreturn = getRank(schoolobjects)
-
-
-    f = open("component scores.csv", "w")
-    f.truncate()
-    f.close()
-
-    with open('component scores.csv', 'w') as result:
-        writer = csv.writer(result, delimiter=",")
-        writer.writerow(('School', 'Counted Scores'))
-        for school in schoolobjects:
-            obje = schoolobjects[school]
-            row = (obje.name, obje.countedPoints)
-            # row = (row[0], str(row[1]))
-            writer.writerow(row)
+    toreturn = (getRank(schoolobjects), schoolobjects)
 
     # for school in schoolobjects:
     #     #print(obje.points)
@@ -188,22 +176,10 @@ def calculateRanks(regattaLink, schoolsLink):
     return toreturn
 
 
-# ranks = calculateRanks("WomensNow.csv")
-# ranks = calculateRanks("CoedNow.csv")
-
-
-######UNCOMMENT BELOW TO FIGURE OUT RANKS
-# for i in ranks:
-#     print(i[0])
-#
-# for i in ranks:
-#     print(i[1])
-
-
-#
-# totalteams = 18
-# while totalteams >= 18:
-#     print("for teams:", totalteams)
-#     for i in range(totalteams+1):
-#         print(calculateRank("SC_alt", totalteams, i))
-#     totalteams = totalteams - 1
+def CalculateScoreTable(totalTeamsMaximum, totalTeamsMinimum, regattaType):
+    totalteams = totalTeamsMaximum
+    while totalteams >= totalTeamsMinimum:
+        print("for teams:", totalteams)
+        for i in range(1, totalteams+1):
+            print(calculateRank(regattaType, totalteams, i))
+        totalteams = totalteams - 1
