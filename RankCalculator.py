@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import GoogleSheets
 import TechscoreReader
-# import Runner
 import csv
 
 class School:
@@ -36,7 +35,6 @@ def calculateRankS(type, totalTeams, score):
         last = 5
     rankvalue = -1.0*(first-last) / (totalTeams-1) * (score-1) + first
     return rankvalue
-
 
 def calculateRank(type, totalTeams, score):
     if score == 0:
@@ -166,14 +164,7 @@ def calculateRanks(regattaLink, schoolsLink):
         else:
             print("something is wrong ")
 
-    toreturn = (getRank(schoolobjects), schoolobjects)
-
-    # for school in schoolobjects:
-    #     #print(obje.points)
-    #     obje = schoolobjects[school]
-    #     print(obje.name, obje.countedPoints)
-
-    return toreturn
+    return (getRank(schoolobjects), schoolobjects)
 
 
 def CalculateScoreTable(totalTeamsMaximum, totalTeamsMinimum, regattaType):

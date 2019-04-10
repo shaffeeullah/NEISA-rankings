@@ -32,17 +32,3 @@ with open(componentScoresFile, 'w') as result:
         obje = schoolobjects[school]
         row = (obje.name, obje.countedPoints)
         writer.writerow(row)
-
-# for i in ranks:
-#     print(i[0])
-#
-# for i in ranks:
-#     print(i[1])
-
-#
-# totalteams = 18
-# while totalteams >= 18:
-#     print("for teams:", totalteams)
-#     for i in range(totalteams+1):
-#         print(calculateRank("SC_alt", totalteams, i))
-#     totalteams = totalteams - 1
