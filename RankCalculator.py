@@ -18,12 +18,8 @@ class School:
     def getPointsTotal(self):
         if len(self.points) > 3:
             self.countedPoints = [self.points[0], self.points[1], self.points[2], self.points[3], self.SRegattaScore]
-            return self.points[0] + self.points[1] + self.points[2] + self.points[3] + self.SRegattaScore
-        else:
-            total = 0
-            for i in self.points:
-                total += i
-            return total + self.SRegattaScore
+            return sum(self.countedPoints)
+        return sum(self.points) + self.SRegattaScore
 
 def calculateRankS(type, totalTeams, score):
     if (score == 0):
@@ -33,7 +29,7 @@ def calculateRankS(type, totalTeams, score):
     if type == "S":
         first = 10
         last = 5
-    rankvalue = -1.0*(first-last) / (totalTeams-1) * (score-1) + first
+    rankvalue = -1.0*(first-last) / (totalTeams-1) * (score-1) + first ### this will error if type isn't S?
     return rankvalue
 
 def calculateRank(type, totalTeams, score):
@@ -124,45 +120,22 @@ def calculateRanks(regattaLink, schoolsLink):
     for index, regatta in df.iterrows():
         regattaType = regatta.Type
         regattaFinishes, totalTeams = TechscoreReader.getRegattaResultsAndNumTeams(regatta.Link)
-        if (regattaType == "SC_A"):
-            enterSScores(schoolobjects, regattaFinishes, "SC_A", totalTeams)
+        if regattaType in ("SC_A", "WSC_A", "SC_B"):
+            enterSScores(schoolobjects, regattaFinishes, regattaType, totalTeams)
+            continue
 
-        elif (regattaType == "WSC_A"):
-            enterSScores(schoolobjects, regattaFinishes, "WSC_A", totalTeams)
-
-        elif (regattaType == "SC_B"):
-            enterSScores(schoolobjects, regattaFinishes, "SC_B", totalTeams)
-
-        elif (regattaType == "A"):
+        if (regattaType == "A"):
             if (totalTeams < 18):
                 totalTeams = 18
-            enterScores(schoolobjects, regattaFinishes, "A", totalTeams)
 
-        elif (regattaType == "special_A"): #the same as A but it doesn't change the total teams to the 18 minimum
-            enterScores(schoolobjects, regattaFinishes, "A", totalTeams)
+        if regattaType == "special_A":
+            regattaType = "A"
 
-        elif (regattaType == "WSC"):
-            enterScores(schoolobjects, regattaFinishes, "WSC", totalTeams)
+        if regattaType not in ("A", "special_A", "WSC", "B", "C", "WA", "WB", "SC", "SC_alt"):
+            print("something is wrong")
+            continue
 
-        elif (regattaType == "B"):
-            enterScores(schoolobjects, regattaFinishes, "B", totalTeams)
-
-        elif (regattaType == "C"):
-            enterScores(schoolobjects, regattaFinishes, "C", totalTeams)
-
-        elif (regattaType == "WA"):
-            enterScores(schoolobjects, regattaFinishes, "WA", totalTeams)
-
-        elif (regattaType == "WB"):
-            enterScores(schoolobjects, regattaFinishes, "WB", totalTeams)
-
-        elif (regattaType == "SC"):
-            enterScores(schoolobjects, regattaFinishes, "SC", totalTeams)
-
-        elif (regattaType == "SC_alt"):
-            enterScores(schoolobjects, regattaFinishes, "SC_alt", totalTeams)
-        else:
-            print("something is wrong ")
+        enterScores(schoolobjects, regattaFinishes, regattaType, totalTeams)
 
     return (getRank(schoolobjects), schoolobjects)
 
