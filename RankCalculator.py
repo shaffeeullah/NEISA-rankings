@@ -70,10 +70,10 @@ def enterSScores(schoolobjects, data, type, totalTeams, regattaName):
         type = "SC"
     elif type == "SC_B":
         type = "B"
-    elif type == "WSC_A":
+    elif type == "WSC_A": #TODO: why was it WSC_A in the first place? why not just WSC?
         type = "WSC"
     else:
-        "AHHH you did something stupid"
+        "enterSScores doesnt understand the regatta type"
 
     for scoreind in range(len(data)):
         team = data[scoreind]
@@ -116,6 +116,7 @@ def calculateRanks(regattaLink, schoolsLink):
         if regattaType == "special_A":
             regattaType = "A"
 
+        #TODO: where is the WSC one the line below coming from?
         if regattaType not in ("A", "special_A", "WSC", "B", "C", "WA", "WB", "SC", "SC_alt"):
             print("incorrect regatta type; something is wrong")
             continue
