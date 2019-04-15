@@ -27,8 +27,8 @@ f.close()
 
 with open(componentScoresFile, 'w') as result:
     writer = csv.writer(result, delimiter=",")
-    writer.writerow(('School', 'Counted Scores'))
+    writer.writerow(('School', 'Counted Scores Regular Regattas', 'Championship Score'))
     for school in schoolobjects:
         obje = schoolobjects[school]
-        row = (obje.name, obje.countedPoints)
+        row = (obje.name, obje.countedPoints, obje.SRegattaScore)
         writer.writerow(row)

@@ -1,37 +1,37 @@
-School,Counted Scores
-Bates College,"[2.40864, 2.0072, 1.4503949999999999, 1.3727999999999998, 4.68435]"
-Bentley University,[]
-Boston College,"[8.529411764705882, 8.5, 7.253333333333334, 7.229473684210527, 8.235294117647058]"
-Boston University,"[8.5, 8.0, 8.0, 6.0, 7.0588235294117645]"
-Bowdoin College,"[9.705882352941176, 8.0, 7.0, 7.0, 8.529411764705882]"
-Brown University,"[8.5, 7.9411764705882355, 7.0, 6.346666666666667, 8.823529411764707]"
-U. S. Coast Guard Academy,"[7.0588235294117645, 6.77763157894737, 6.0, 5.5, 6.470588235294118]"
-Connecticut College,"[7.681315789473685, 5.5, 5.5, 3.5, 7.647058823529411]"
-Dartmouth College,"[8.5, 7.0, 6.5, 6.470588235294118, 9.705882352941176]"
-Emmanuel College,[]
-Fairfield University,[]
-Harvard University,"[8.5, 8.16, 8.0, 7.5, 9.411764705882353]"
-Johnson and Wales University,[]
-Maine Maritime Academy,"[2.4710400000000003, 1.57815, 1.3598571428571429, 1.2462374999999999, 5.0]"
-Massachusetts Institute of Technology,"[8.823529411764707, 7.5, 7.5, 6.325789473684211, 7.352941176470589]"
-Massachusetts Maritime Academy,"[3.1563, 2.5, 2.258285714285714, 2.0072, 5.588235294117647]"
-McGill University,"[3.21152, 1.92192, 1.60576, 0.80288, 3.5132625]"
-Middlebury College,"[0.80288, 0.40144, 0.31155937499999986, 0.27456000000000014, 2.342175]"
-Northeastern University,"[3.636425, 3.399642857142857, 3.1155937499999995, 3.0, 5.88235294117647]"
-Providence College,[]
-Roger Williams University,"[8.0, 7.647058823529411, 7.5, 7.5, 9.117647058823529]"
-Sacred Heart University,[]
-Salve Regina University,"[3.952, 3.61296, 3.61296, 3.21152, 5.294117647058823]"
-Tufts University,"[8.5, 7.5, 7.0, 6.0, 7.9411764705882355]"
-University of Connecticut,[]
-University of Massachusetts at Amherst,"[2.81008, 2.40864, 0.82368, 0.40144, 1.1710875]"
-University of Massachusetts at Dartmouth,[]
-University of New Hampshire,[]
-University of Rhode Island,"[8.0, 6.5, 6.5, 5.03505, 6.764705882352941]"
-University of Vermont,"[4.73445, 4.5, 4.36183125, 4.229871428571428, 6.1764705882352935]"
-Wellesley College,[]
-Wesleyan University,[]
-Williams College,[]
-Worcester Polytechnical Institute,[]
-Yale University,"[10.0, 8.5, 8.5, 8.133157894736843, 10.0]"
-Wentworth Institute of Technology,"[2.0072, 1.129142857142857, 0.3776769230769226, 0.0, 0.0]"
+School,Counted Scores Regular Regattas,Championship Score
+Bates College,"[(2.40864, 'chris-loder'), (2.0072, 'sacred-heart'), (1.4503949999999999, 'penobscot-bay-open'), (1.3727999999999998, 'salt-pond-invite')]","(4.68435, 'ne-fall-tournament')"
+Bentley University,[],"(0, None)"
+Boston College,"[(8.529411764705882, 'coed-showcase-final'), (8.5, 'icsa-match-race-national'), (7.253333333333334, 'neisa-men-singlehanded-championships'), (7.229473684210527, 'danmark')]","(8.235294117647058, '78th-schell')"
+Boston University,"[(8.5, 'moody-trop'), (8.0, 'harry-anderson-jr'), (8.0, 'hood'), (6.0, 'captain-hurst-bowl')]","(7.0588235294117645, '78th-schell')"
+Bowdoin College,"[(9.705882352941176, 'coed-showcase-final'), (8.0, 'sherman-hoyt'), (7.0, 'harry-anderson-jr'), (7.0, 'coed-showcase')]","(8.529411764705882, '78th-schell')"
+Brown University,"[(8.5, 'coed-showcase'), (7.9411764705882355, 'coed-showcase-final'), (7.0, 'sherman-hoyt'), (6.346666666666667, 'neisa-men-singlehanded-championships')]","(8.823529411764707, '78th-schell')"
+U. S. Coast Guard Academy,"[(7.0588235294117645, 'coed-showcase-final'), (6.77763157894737, 'danmark'), (6.0, 'sherman-hoyt'), (5.5, 'captain-hurst-bowl')]","(6.470588235294118, '78th-schell')"
+Connecticut College,"[(7.681315789473685, 'danmark'), (5.5, 'harry-anderson-jr'), (5.5, 'hood'), (5.0808333333333335, 'truxtun-umsted-coed-showcase')]","(7.647058823529411, '78th-schell')"
+Dartmouth College,"[(8.5, 'hatch-brown'), (7.0, 'captain-hurst-bowl'), (6.5, 'harry-anderson-jr'), (6.470588235294118, 'coed-showcase-final')]","(9.705882352941176, '78th-schell')"
+Emmanuel College,[],"(0, None)"
+Fairfield University,[],"(0, None)"
+Harvard University,"[(8.5, 'sherman-hoyt'), (8.16, 'neisa-men-singlehanded-championships'), (8.0, 'captain-hurst-bowl'), (7.5, 'hood')]","(9.411764705882353, '78th-schell')"
+Johnson and Wales University,[],"(0, None)"
+Maine Maritime Academy,"[(2.4710400000000003, 'salt-pond-invite'), (1.57815, 'callagy-ross'), (1.3598571428571429, 'harman-cup'), (1.2462374999999999, 'george-warren-smith')]","(5.0, '78th-schell')"
+Massachusetts Institute of Technology,"[(8.823529411764707, 'coed-showcase-final'), (7.5, 'harry-anderson-jr'), (7.5, 'coed-showcase'), (6.325789473684211, 'danmark')]","(7.352941176470589, '78th-schell')"
+Massachusetts Maritime Academy,"[(3.1563, 'callagy-ross'), (2.5, 'moody-trop'), (2.258285714285714, 'great-herring-pond-open'), (2.0072, 'chris-loder')]","(5.588235294117647, '78th-schell')"
+McGill University,"[(3.21152, 'sacred-heart'), (1.92192, 'salt-pond-invite'), (1.60576, 'chris-loder'), (0.80288, 'fairifeld-cup')]","(3.5132625, 'ne-fall-tournament')"
+Middlebury College,"[(0.80288, 'chris-loder'), (0.40144, 'sacred-heart'), (0.31155937499999986, 'george-warren-smith'), (0.27456000000000014, 'salt-pond-invite')]","(2.342175, 'ne-fall-tournament')"
+Northeastern University,"[(3.636425, 'oberg'), (3.399642857142857, 'harman-cup'), (3.1266666666666665, 'truxtun-umsted-coed-showcase'), (3.1155937499999995, 'george-warren-smith')]","(5.88235294117647, '78th-schell')"
+Providence College,[],"(0, None)"
+Roger Williams University,"[(8.0, 'hatch-brown'), (7.647058823529411, 'coed-showcase-final'), (7.5, 'sherman-hoyt'), (7.5, 'harvard-coed-showcase')]","(9.117647058823529, '78th-schell')"
+Sacred Heart University,[],"(0, None)"
+Salve Regina University,"[(3.952, 'great-herring-pond-open'), (3.61296, 'chris-loder'), (3.61296, 'sacred-heart'), (3.21152, 'fairifeld-cup')]","(5.294117647058823, '78th-schell')"
+Tufts University,"[(8.5, 'hood'), (7.5, 'hatch-brown'), (7.0, 'moody-trop'), (6.0, 'coed-showcase')]","(7.9411764705882355, '78th-schell')"
+University of Connecticut,[],"(0, None)"
+University of Massachusetts at Amherst,"[(2.81008, 'fairifeld-cup'), (2.40864, 'sacred-heart'), (0.82368, 'salt-pond-invite'), (0.40144, 'chris-loder')]","(1.1710875, 'ne-fall-tournament')"
+University of Massachusetts at Dartmouth,[],"(0, None)"
+University of New Hampshire,[],"(0, None)"
+University of Rhode Island,"[(8.0, 'moody-trop'), (6.5, 'hatch-brown'), (6.5, 'captain-hurst-bowl'), (5.03505, 'oberg')]","(6.764705882352941, '78th-schell')"
+University of Vermont,"[(4.73445, 'callagy-ross'), (4.5, 'hatch-brown'), (4.36183125, 'george-warren-smith'), (4.229871428571428, 'sister-esther-open')]","(6.1764705882352935, '78th-schell')"
+Wellesley College,[],"(0, None)"
+Wesleyan University,[],"(0, None)"
+Williams College,[],"(0, None)"
+Worcester Polytechnical Institute,[],"(0, None)"
+Yale University,"[(10.0, 'coed-showcase-final'), (8.5, 'harry-anderson-jr'), (8.5, 'harvard-coed-showcase'), (8.133157894736843, 'danmark')]","(10.0, '78th-schell')"
+Wentworth Institute of Technology,"[(2.0072, 'fairifeld-cup'), (1.129142857142857, 'great-herring-pond-open'), (0.3776769230769226, 'norman-reid'), (0.0, 'mt-hope-bay-invite')]","(0.0, 'ne-fall-tournament')"
