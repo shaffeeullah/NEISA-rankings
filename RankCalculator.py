@@ -42,7 +42,7 @@ def calculateRank(type, totalTeams, score):
         first = 10.0
         last = 5.0
     elif type == "SC_alt":
-        first = 4.8
+        first = 7
 
     droprate = .005 * first
     amounttodrop = (18-totalTeams)*droprate
