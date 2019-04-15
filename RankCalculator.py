@@ -21,17 +21,6 @@ class School:
             return sum(self.countedPoints)
         return sum(self.points) + self.SRegattaScore
 
-def calculateRankS(type, totalTeams, score):
-    if (score == 0):
-        return 0
-    first = None
-    last = None
-    if type == "S":
-        first = 10
-        last = 5
-    rankvalue = -1.0*(first-last) / (totalTeams-1) * (score-1) + first ### this will error if type isn't S?
-    return rankvalue
-
 def calculateRank(type, totalTeams, score):
     if score == 0:
         return 0
@@ -124,15 +113,14 @@ def calculateRanks(regattaLink, schoolsLink):
             enterSScores(schoolobjects, regattaFinishes, regattaType, totalTeams)
             continue
 
-        if (regattaType == "A"):
-            if (totalTeams < 18):
-                totalTeams = 18
+        if (regattaType == "A") and (totalTeams < 18):
+            totalTeams = 18
 
         if regattaType == "special_A":
             regattaType = "A"
 
         if regattaType not in ("A", "special_A", "WSC", "B", "C", "WA", "WB", "SC", "SC_alt"):
-            print("something is wrong")
+            print("incorrect regatta type; something is wrong")
             continue
 
         enterScores(schoolobjects, regattaFinishes, regattaType, totalTeams)
