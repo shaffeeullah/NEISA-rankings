@@ -18,6 +18,9 @@ class School:
     def getPointsTotal(self):
         if len(self.points) > 3:
             self.countedPoints = [self.points[0], self.points[1], self.points[2], self.points[3]]
+        else:
+            self.countedPoints = self.points
+            
         return sum([pair[0] for pair in self.countedPoints]) + self.SRegattaScore[0]
 
 def calculateRank(type, totalTeams, score):
