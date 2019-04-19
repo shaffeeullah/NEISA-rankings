@@ -20,7 +20,7 @@ class School:
             self.countedPoints = [self.points[0], self.points[1], self.points[2], self.points[3]]
         else:
             self.countedPoints = self.points
-            
+
         return sum([pair[0] for pair in self.countedPoints]) + self.SRegattaScore[0]
 
 def calculateRank(type, totalTeams, score):
@@ -55,15 +55,15 @@ def calculateRank(type, totalTeams, score):
 
 def enterScores(schoolobjects, data, type, totalTeams, regattaName):
     data = list(data)
-    seen = set()
-    offset = 0
+    # seen = set()
+    # offset = 0
     for scoreind in range(len(data)):
         team = data[scoreind]
-        if team in seen:
-            offset += 1
-            continue
-        seen.add(team)
-        score = calculateRank(type, totalTeams, scoreind+1-offset)
+        # if team in seen:
+        #     offset += 1
+        #     continue
+        # seen.add(team)
+        score = calculateRank(type, totalTeams, scoreind+1)
         if team in schoolobjects:
             schoolobjects[team].addPoints(score, regattaName)
 
