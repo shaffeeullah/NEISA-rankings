@@ -55,14 +55,8 @@ def calculateRank(type, totalTeams, score):
 
 def enterScores(schoolobjects, data, type, totalTeams, regattaName):
     data = list(data)
-    # seen = set()
-    # offset = 0
     for scoreind in range(len(data)):
         team = data[scoreind]
-        # if team in seen:
-        #     offset += 1
-        #     continue
-        # seen.add(team)
         score = calculateRank(type, totalTeams, scoreind+1)
         if team in schoolobjects:
             schoolobjects[team].addPoints(score, regattaName)
