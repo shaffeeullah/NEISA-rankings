@@ -6,10 +6,10 @@ coedRegattaLink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQfeyC1LeMtdi
 womensRegattaLink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQfeyC1LeMtdi0qIz-GWxke3jPQ1jJzp72YNi_I9YXF1f73HXUBRTG7AqePHI_L5X54HVwAofxueTiO/pub?output=csv"
 
 coedRankingsOutputFile = "rankings.csv"
-coedComponentScoresFile = "component scores.csv"
+coedComponentScoresFile = "component_scores.csv"
 
 womensRankingOutputFile = "womensrankings.csv"
-womensComponentScoresFile = "womens component scores.csv"
+womensComponentScoresFile = "womens_component_scores.csv"
 
 ################## COED ######################
 ranks, schoolobjects = RankCalculator.calculateRanks(coedRegattaLink, schoolslink)
