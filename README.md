@@ -1,6 +1,6 @@
 # NEISA-rankings
 
-How to use:  
+## How to use:  
 Create 2 google sheets, following this structure:  
 
 1. A sheet with all the schools in NEISA with the header "Schools" at the top.  
@@ -34,8 +34,21 @@ for teams: 18
 0.0   
 If there were more teams (ex: RankCalculator.CalculateScoreTable(18, 16, "A")) it would print out the same thing but for 18, 17, and 16 teams.
 
-For Mike to run the python file:   
-NOTE: Case matters in the following commands.  
-Open Terminal  
-Type 'neisa'  
-Type 'python3 Runner.py'  
+## For Mike to Run the Python File:   
+NOTE: Capitals matter in the following commands. Also, the `neisa` command will only work on your personal laptop. If you are not on your laptop or anyone follows the below instructions on a different machine, run `cd ~/Desktop/NEISA-rankings-master` *instead* of `neisa`.  
+
+0. Open Terminal  
+1. Type `neisa`   
+2. Type `python3 Runner.py`  
+3. Files will appear in Finder under Desktop/NEISA-rankings-master
+
+## For Mike to Get Updated Code:
+
+0. Save the links that are at the top of Runner.py somewhere (e.g. Notes)
+1. Come to this page! Congrats.  
+2. Hit the green *Clone or download* button in the upper right corner of the page.
+3. Hit *Download ZIP*
+4. The zip should download. Double click the download to unzip it into a folder. (Finder should open). Drag that folder into your Desktop. If it asks you to replace the existing one, say yes.
+5. **VERY IMPORTANT**: Make sure the folder is called **NEISA-rankings-master**. Make sure there's no (1) or (2) at the end.
+6. Update the links at the top of Runner.py if they are not correct.
+7.  See above to run it!
