@@ -12,7 +12,7 @@ class School:
         self.countedPoints = [] #if this is empty then all the points are counted
 
     def addPoints(self,x,regattaName):
-        self.points.append((x, regattaName))
+        self.points.append((round(x, 2), regattaName))
         self.points = sorted(self.points, key=lambda x: x[0], reverse=True)
 
     def getPointsTotal(self):
@@ -77,7 +77,7 @@ def enterSScores(schoolobjects, data, type, totalTeams, regattaName):
         score = calculateRank(type, totalTeams, scoreind+1)
         if team in schoolobjects:
             if schoolobjects[team].SRegattaScore[0] == 0:
-                schoolobjects[team].SRegattaScore = (score, regattaName)
+                schoolobjects[team].SRegattaScore = (round(score, 2), regattaName)
             else:
                 print("hmm you tried to add two s scores to the same school object")
 
@@ -101,7 +101,7 @@ def calculateRanks(regattaLink, schoolsLink):
     schoolobjects = addSchoolObjects(schoolsLink)
     for index, regatta in df.iterrows():
         regattaType = regatta.Type
-        regattaFinishes, totalTeams = TechscoreReader.getRegattaResultsAndNumTeams(regatta.Link)
+        regattaFinishes, totalTeams = TechscoreReader.getRegattaResultsAndNumTeams(regatta.Link, regattaType)
         regattaName = (regatta.Link.split("/"))[-2]
         if regattaType in ("SC_A", "WSC_A", "SC_B"):
             enterSScores(schoolobjects, regattaFinishes, regattaType, totalTeams, regattaName)
