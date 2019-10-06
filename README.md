@@ -34,12 +34,8 @@ for teams: 18
 0.0   
 If there were more teams (ex: RankCalculator.CalculateScoreTable(18, 16, "A")) it would print out the same thing but for 18, 17, and 16 teams.
 
-For Mike to run the python file:
-
-NOTE: Case matters in the following commands.
-
-Open Terminal
-
-Type 'neisa'
-
-Type 'python3 Runner.py'
+For Mike to run the python file:   
+NOTE: Case matters in the following commands.  
+Open Terminal  
+Type 'neisa'  
+Type 'python3 Runner.py'  
