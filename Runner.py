@@ -1,9 +1,9 @@
 import RankCalculator
 import csv
 
-schoolslink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQfU-xYwtTc9nlW_tpsEmk-TMlUqsvzLooC8m3tcFnS7ig3lvWkA_b_2BxzUNGik8zq6IV-Lg9BwGSV/pub?output=csv"
-coedRegattaLink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQfeyC1LeMtdi0qIz-GWxke3jPQ1jJzp72YNi_I9YXF1f73HXUBRTG7AqePHI_L5X54HVwAofxueTiO/pub?output=csv"
-womensRegattaLink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQfeyC1LeMtdi0qIz-GWxke3jPQ1jJzp72YNi_I9YXF1f73HXUBRTG7AqePHI_L5X54HVwAofxueTiO/pub?output=csv"
+schoolslink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR4d8JvuxteLJ7NqAvZhjYzRggjV_ptKUQCNNsQAVrblK9r2h3CFovSODtSpg7Jp7_xt0lFdLjxUedQ/pub?output=csv"
+coedRegattaLink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRYuBfRn534EQy6tXw957Ree0IPLUxyaFri25OQtd_0n5SyG3J-5ELfpUPgwUKGxT_qfDmzrmtds8Y2/pub?output=csv"
+womensRegattaLink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrN9Sdev0TpLnAzuUgPQFwEa_VXcmsXX9CKoR3Y5p4fFydyh8WwdM1Xx-yaOWobLlNYPYWUMjGql1w/pub?output=csv"
 
 coedRankingsOutputFile = "rankings.csv"
 coedComponentScoresFile = "component_scores.csv"
