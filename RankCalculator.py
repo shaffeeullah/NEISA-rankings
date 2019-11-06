@@ -67,10 +67,12 @@ def enterSScores(schoolobjects, data, type, totalTeams, regattaName):
         type = "SC"
     elif type == "SC_B":
         type = "B"
+        if (totalTeams < 18):
+            totalTeams = 18
     elif type == "WSC_A": #TODO: why was it WSC_A in the first place? why not just WSC?
         type = "WSC"
     else:
-        "enterSScores doesnt understand the regatta type"
+        print("enterSScores doesnt understand the regatta type")
 
     for scoreind in range(len(data)):
         team = data[scoreind]
