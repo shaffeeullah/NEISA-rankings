@@ -10,7 +10,7 @@ Follow this model: https://docs.google.com/spreadsheets/d/e/2PACX-1vQfU-xYwtTc9n
 
 Note: The google sheets you should use is the link you get when going to File > Publish to Web. Change the Web Page setting to CSV using the dropdown. You should get a link from doing this.
 
-In the Runner.py file, paste in the two links and specify two CSV files to output the results to. Put each of these between quotes (like the way it is now). For the way it is currently set up, the results will be contained in the rankings.csv file and the component scores.csv file. When everything is set, run the Runner.py script.
+In the Runner.py file, paste in the two links and specify two CSV files to output the results to. Put each of these between quotes (like the way it is now). For the way it is currently set up, the results will be contained in the `rankings.csv` file and the `component_scores.csv file`. When everything is set, run the Runner.py script (`python3 Runner.py` from the `neisa` directory).
 
 Call RankCalculator.CalculateScoreTable(maximumNumberOfTeams, minimumNumberOfTeams, "regattaType") in in order to get the scoring table that the code is using. It will print out to your console. For example, calling RankCalculator.CalculateScoreTable(18, 18, "A"), will print out:   
 for teams: 18  
@@ -33,6 +33,12 @@ for teams: 18
 0.5   
 0.0   
 If there were more teams (ex: RankCalculator.CalculateScoreTable(18, 16, "A")) it would print out the same thing but for 18, 17, and 16 teams.
+
+To call this function, type the following commands into your terminal
+1. `python3`
+2. `import RankCalculator`
+3. `RankCalculator.CalculateScoreTable(9, 9, "C")` (or whatever you want the parameters to be)
+Type `exit()` to get back to the main terminal.
 
 ## For Mike to Run the Python File:   
 NOTE: Capitals matter in the following commands. Also, the `neisa` command will only work on your personal laptop. If you are not on your laptop or anyone follows the below instructions on a different machine, run `cd ~/Desktop/NEISA-rankings-master` *instead* of `neisa`.  
