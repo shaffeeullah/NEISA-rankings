@@ -119,8 +119,10 @@ def calculateRanks(regattaLink, schoolsLink):
             regattaType = "A"
 
         #TODO: where is the WSC one the line below coming from?
-        if regattaType not in ("A", "special_A", "A-", "WSC", "B", "S", "C", "WA", "WB", "SC", "SC_alt"):
-            print("incorrect regatta type; something is wrong")
+        regattaTypes = ["A", "special_A", "A-", "WSC", "B", "S", "C", "WA", "WB", "SC", "SC_alt"]
+        if regattaType not in regattaTypes:
+            print("Regatta type " + regattaType + " is incorrect for " + regatta.Link)
+            print("Possible regatta type options for this regatta are: " + str(regattaTypes))
             continue
 
         enterScores(schoolobjects, regattaFinishes, regattaType, totalTeams, regattaName)
