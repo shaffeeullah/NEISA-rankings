@@ -41,10 +41,10 @@ To call this function, type the following commands into your terminal
 Type `exit()` to get back to the main terminal.
 
 ## For Mike to Run the Python File:   
-NOTE: Capitals matter in the following commands. Also, the `neisa` command will only work on your personal laptop. If you are not on your laptop or anyone follows the below instructions on a different machine, run `cd ~/Desktop/NEISA-rankings-master` *instead* of `neisa`.  
+NOTE: Capitals matter in the following commands.
 
 0. Open Terminal  
-1. Type `neisa`   
+1. Type `cd ~/Desktop/NEISA-rankings-master`   
 2. Type `python3 Runner.py`  
 3. Files will appear in Finder under Desktop/NEISA-rankings-master
 
