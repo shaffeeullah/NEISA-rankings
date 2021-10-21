@@ -102,6 +102,7 @@ def calculateRanks(regattaLink, schoolsLink):
     df = GoogleSheets.readSheet(regattaLink)
     schoolobjects = addSchoolObjects(schoolsLink)
     for index, regatta in df.iterrows():
+        print(df)
         regattaType = regatta.Type
         regattaFinishes, totalTeams = TechscoreReader.getRegattaResultsAndNumTeams(regatta.Link, regattaType)
         regattaName = (regatta.Link.split("/"))[-2]
