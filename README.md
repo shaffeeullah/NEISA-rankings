@@ -23,7 +23,7 @@ NOTE: Capitals matter in the following commands.
 ## To Get Updated Code:
 0. Save the links that are at the top of Runner.py somewhere (e.g. Notes)
 1. Come to this page! Congrats.  
-2. Hit the green *Clone or download* button in the upper right corner of the page.
+2. Hit the green *Code* button in the upper right corner of the page.
 3. Hit *Download ZIP*
 4. The zip should download. Double click the download to unzip it into a folder. (Finder should open). Drag that folder into your Desktop. If it asks you to replace the existing one, say yes.
 5. **VERY IMPORTANT**: Make sure the folder is called **NEISA-rankings-master**. Make sure there's no (1) or (2) at the end.
@@ -37,6 +37,6 @@ NOTE: Capitals matter in the following commands.
 3. `RankCalculator.CalculateScoreTable(9, 9, "C")` (or whatever you want the parameters to be, see below)
 Type `exit()` to get back to the main terminal.
 
-Format of the call: `RankCalculator.CalculateScoreTable(maximumNumberOfTeams, minimumNumberOfTeams, "regattaType")` It will print out to your console the scoring tab. 
+Format of the call: `RankCalculator.CalculateScoreTable(maximumNumberOfTeams, minimumNumberOfTeams, "regattaType")` It will print out to your console the scoring tab.
 For example, calling RankCalculator.CalculateScoreTable(18, 18, "A"), will print out the scoring table for A 18 teams.
 RankCalculator.CalculateScoreTable(18, 16, "A") it would print out the same thing but for A 18, A 17, and A 16 teams.
