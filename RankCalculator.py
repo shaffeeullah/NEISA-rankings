@@ -30,7 +30,7 @@ def calculateRank(type, totalTeams, score):
     last = 0
     if type == "A":
         first = 8.5
-    elif type == "B" or type == "S":
+    elif type == "B":
         first = 5.01
     elif type == "C":
         first = 4.16
@@ -112,14 +112,14 @@ def calculateRanks(regattaLink, schoolsLink):
         if (regattaType == "A") and (totalTeams < 18):
             totalTeams = 18
 
-        if (regattaType == "S") and (totalTeams < 16): #sloop regatta
+        if (regattaType == "B") and (totalTeams < 16):
             totalTeams = 16
 
         if regattaType == "special_A": #sidesteps the total team minimum
             regattaType = "A"
 
         #TODO: where is the WSC one the line below coming from?
-        regattaTypes = ["A", "special_A", "A-", "WSC", "B", "S", "C", "WA", "WB", "SC", "SC_alt"]
+        regattaTypes = ["A", "special_A", "A-", "WSC", "B", "C", "WA", "WB", "SC", "SC_alt"]
         if regattaType not in regattaTypes:
             print("Regatta type " + regattaType + " is incorrect for " + regatta.Link)
             print("Possible regatta type options for this regatta are: " + str(regattaTypes))
