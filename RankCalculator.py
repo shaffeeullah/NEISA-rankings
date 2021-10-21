@@ -102,9 +102,11 @@ def calculateRanks(regattaLink, schoolsLink):
     df = GoogleSheets.readSheet(regattaLink)
     schoolobjects = addSchoolObjects(schoolsLink)
     for index, regatta in df.iterrows():
-        print(df)
         regattaType = regatta.Type
         regattaFinishes, totalTeams = TechscoreReader.getRegattaResultsAndNumTeams(regatta.Link, regattaType)
+        lateDrops = regatta.LateDrops
+        if not pd.isnull(lateDrops):
+            totalTeams += lateDrops
         regattaName = (regatta.Link.split("/"))[-2]
         if regattaType in ("SC_A", "WSC_A", "SC_B"):
             enterSScores(schoolobjects, regattaFinishes, regattaType, totalTeams, regattaName)
