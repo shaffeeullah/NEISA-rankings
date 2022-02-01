@@ -1,5 +1,5 @@
 import pandas as pd
 
-def readSheet(link):
+def read_sheet(link):
     df = pd.read_csv(link, encoding = 'utf8')
     return df

@@ -33,10 +33,10 @@ NOTE: Capitals matter in the following commands.
 ## To Generate Scoring Tables:
 0. Open Terminal
 1. `python3`
-2. `import RankCalculator`
-3. `RankCalculator.CalculateScoreTable(9, 9, "C")` (or whatever you want the parameters to be, see below)
+2. `import rank_calculator`
+3. `rank_calculator.calculate_score_table(9, 9, "C")` (or whatever you want the parameters to be, see below)
 Type `exit()` to get back to the main terminal.
 
-Format of the call: `RankCalculator.CalculateScoreTable(maximumNumberOfTeams, minimumNumberOfTeams, "regattaType")` It will print out to your console the scoring tab.
-For example, calling RankCalculator.CalculateScoreTable(18, 18, "A"), will print out the scoring table for A 18 teams.
-RankCalculator.CalculateScoreTable(18, 16, "A") it would print out the same thing but for A 18, A 17, and A 16 teams.
+Format of the call: `rank_calculator.calculate_score_table(maximumNumberOfTeams, minimumNumberOfTeams, "regatta_type")` It will print out to your console the scoring tab.
+For example, calling rank_calculator.calculate_score_table(18, 18, "A"), will print out the scoring table for A 18 teams.
+rank_calculator.calculate_score_table(18, 16, "A") it would print out the same thing but for A 18, A 17, and A 16 teams.
